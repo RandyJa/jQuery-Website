@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@200&display=swap" rel="stylesheet">
+
+    <title>jQuery Website</title>
+
+    <script>
+        $( function() {
+        $( "#accordion" ).accordion({
+        collapsible: true
+        });
+      } );
+
+        $( function() {
+        $( document ).tooltip({
+        items: "img, [data-geo], [title]",
+        content: function() {
+        var element = $( this );
+        if ( element.is( "[data-geo]" ) ) {
+        var text = element.text();
+        return "<img class='map' alt='" + text +
+        "' src='http://maps.google.com/maps/api/staticmap?" +
+        "zoom=11&size=350x350&maptype=terrain&sensor=false&center=" +
+        text + "'>";
+        }
+        if ( element.is( "[title]" ) ) {
+          return element.attr( "title" );
+        }
+        if ( element.is( "img" ) ) {
+          return element.attr( "alt" );
+        }
+      }
+    });
+  } );
+
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+      </script>
+
+    <style>
+        body{
+            margin:0%;
+        }
+
+        #page-container {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #content-wrap {
+            padding-bottom: 2.5rem;
+        }
+
+        #accordion{
+            position: absolute;
+            font-family: 'Source Code Pro', monospace;
+            margin-left: 24%;
+            width: 800px;
+            text-align: left;
+        }
+
+        #wo{
+            display: flex;
+            justify-content:center;
+            font-size: 40px;
+            color: black;
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        .inbet{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 50px;
+            margin-left: 90px;
+        }
+
+        #para{
+            font-family: 'Saira Extra Condensed', sans-serif;
+            color: black;
+            background-color: white;
+            font-size: 25px;
+            z-index: -1;
+        }
+
+        h2{
+            position: absolute;
+            top: 175px;
+            right: 595px;
+            color: white;
+            align-content:space-between;
+            font-family: 'Charmonman', cursive;
+            padding:3px;
+            text-align: center;
+            font-size: 150px;
+            margin:0%;
+        }
+
+        h1{
+            position: sticky;
+            z-index: 1;
+            top: 0;
+            text-align: justify;
+            color: white;
+            font-size: 25px;
+            background-color: #013220;
+            font-family: 'Charmonman', cursive;
+            padding:5px;
+            margin: 0%;
+        }
+
+
+
+        h3{
+            display: flex;
+            justify-content:center;
+            font-size: 40px;
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        h4{
+          position: absolute;
+            font-size: 15px;
+            right: 715px;
+            color: white;
+            top: 1730px;
+        }
+
+        h5{
+          position: absolute;
+          color: white;
+          right:712px;
+            font-size: 13px;
+            top: 1700px;
+        }
+
+        #mo{
+            filter: brightness(80%);
+            height: 500px;
+            width: 1519px;
+        }
+
+        #footer {
+        background-color: #013220;
+        position: absolute;
+        text-align: center;
+        top: 1633px;
+        width: 100%;
+        height: 170px;
+        color: white;
+}   
+
+      #link{
+        color: black;
+        text-decoration: none;
+      }
+
+      #lin{
+      border-bottom: 1px solid white;
+      height: 47px;
+      width: 640px;
+      position: absolute;
+      left: 56%;
+      top: 1px;
+      }
+
+      #lin2{
+      border-bottom: 1px solid white;
+      height: 47px;
+      width: 640px;
+      position: absolute;
+      left: 2%;
+      top: 1px;
+      }
+
+      #si{
+        position: absolute;
+        left: 675px;
+        top: 10px;
+        height: 55px;
+        width: 55px;
+      }
+
+      #si2{
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 1657px;
+        left: 795px;
+      }
+
+      #si3{
+        position: absolute;
+        left: 740px;
+        top: 23px;
+        height: 30px;
+        width: 30px;
+      }
+
+      #soq{
+        color: black;
+        text-decoration: none;
+      }
+
+    </style>
+</head>
+<body>
+
+<div id="page-container">
+<div id="content-wrap">
+
+    <heading>
+        <a id = "link" href = "index.html"><h1>Home</h1></a>
+    </heading>
+
+    <div class="picture">
+        <img id="mo" src="https://a.storyblok.com/f/53624/4096x1280/4358be1064/stock-photo-landscape-with-atrani-town-at-famous-amalfi-coast-italy-1436187389.jpg">
+        <h2>Italy</h2>
+    </div>
+
+    <h3 id="wo">Explore Italy</h3>
+    <div class="inbet">
+        <div class="clicka">
+            <a href="https://www.google.com/maps/place/Trastevere,+Rome,+Metropolitan+City+of+Rome,+Italy/@41.8911795,12.4593168,15z/data=!3m1!4b1!4m5!3m4!1s0x132f6068695c6df7:0xa39f202778dff633!8m2!3d41.8848294!4d12.4704017" target = "_blank">
+              <img src="https://cdn.kimkim.com/files/a/images/f088350eef64dd58bd86cd57e9cb20609a8635de/big-899f515e71a500d81880d3d7e86848e7.jpg" alt="A Beautiful Street in the Roman Neighborhood of Trastevere" height="300px" width="400px">
+            </a>
+            <h1 id="para">Streets of Rome are a staple of Italian architecture.<br>Narrow and busy, small cars are optimal instead of <br>bigger cars.</h1>
+          </div>
+          <div class="clicka1">
+            <a href="https://www.google.com/maps/place/70011+Alberobello+Metropolitan+City+of+Bari,+Italy/@40.7849816,17.2167,14z/data=!3m1!4b1!4m5!3m4!1s0x1347b26487f9383d:0x803e3f2f028a5d8!8m2!3d40.7864228!4d17.2409304" target = "_blank">
+              <img src="https://content.r9cdn.net/rimg/dimg/c7/61/d309d2eb-city-40527-165d2f23b25.jpg?crop=true&width=1366&height=768&xhint=1688&yhint=1165" height="300px" width="400px" alt="A Small Town in Alberobello">
+            </a>
+            <h1 id="para">Located in southern Italy, This small town is a prime<br>example of the unique kind of structures Italy has to <br>offer.</h1>
+          </div>
+          <div class="clicka2">
+            <a href="https://www.google.com/maps/place/96018+Marzamemi,+Free+municipal+consortium+of+Syracuse,+Italy/@36.7355439,15.110325,15z/data=!3m1!4b1!4m5!3m4!1s0x1312215b8a1a7735:0x2af448387b4dfc28!8m2!3d36.7420487!4d15.1175207" target = "_blank">
+              <img src="https://as1.ftcdn.net/v2/jpg/02/99/39/44/1000_F_299394412_HQ7NFWzrA51AAfOUXJ8NaSRRMdpDMaET.jpg" height="300px" width="400px" alt="An Outdoor Cafe in Sicily">
+            </a>
+            <h1 id="para">Restaurants are often colorful and some are even <br>outdoors to enjoy the Mediterranean climate. </h1>
+          </div>
+    </div>
+
+    <h3>Commonly Asked Questions</h3>
+
+    <div id="accordion">
+        <h3>What language is spoken in Italy?</h3>
+        <div>
+          <p>
+           Italian is the official language of Italy although there are a wide variety of languages and dialects spoken!
+          </p>
+        </div>
+
+        <h3>Do I need a visa to travel to Italy?</h3>
+        <div>
+            <p>
+                U.S. citizens may enter Italy for up to 90 days for tourist or business purposes without a visa. All non-residents are required to complete a declaration of presence.
+            </p>
+        </div>
+
+          <h3>When is the best time to travel to Italy?</h3>
+
+        <div>
+
+            <ul>
+              <li>May</li>
+              <li>June</li>
+              <li>September</li>
+              <li>October</li>
+            </ul>
+
+            <p>
+                Pleasant weather, vibrant scenery, and lower costs are just a few reasons why these are the most popular months to visit.
+            </p>
+
+        </div>
+
+          <h3>What currency is used in Italy?</h3>
+
+          <div>
+            <p>
+            Euros are the currency used in Italy as it is a robust international currency.
+            </p>
+          </div>
+        </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer id="footer">
+
+    <div id="lin"></div>
+    <div id="lin2"></div>
+  <div class="soci1">
+    <img src="faceb.png" id="si"></div>
+    <a id="soq" href="https://www.facebook.com/Italy365/"></a>
+    <img src="pintris.png" id="si3"></div>
+    <img src="https://www.seekpng.com/png/full/1-19750_instagram-white-logo-instagram-logo-png-white-outline.png" id="si2"></div>
+    <h5>&copy Copyright 2022</h5>
+    <h4>Privacy Policy</h4>
+  </div>
+  </div>
+
+</footer>
+</div>
+
+</body>
+</html>
